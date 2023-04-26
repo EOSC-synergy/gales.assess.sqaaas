@@ -1,0 +1,58 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.10
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    gitlab.com/dgmaths9/gales:
+      branch: main
+      repo: https://gitlab.com/dgmaths9/gales
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      gitlab.com/dgmaths9/gales git:
+        commands:
+        - /usr/bin/env sh .sqa/script.dorky-saffron-slug.sh
+        container: qc.acc_scanty-viridian-antelope
+  QC.Doc:
+    repos:
+      gitlab.com/dgmaths9/gales find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.homey-violet-rottweiler.sh
+        container: qc.doc_squirrely-seashell-cow
+      gitlab.com/dgmaths9/gales git:
+        commands:
+        - /usr/bin/env sh .sqa/script.zippy-ruby-goose.sh
+        container: qc.doc_flimsy-xanthic-albatross
+      gitlab.com/dgmaths9/gales markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.leaky-cardinal-saola.sh
+        container: qc.doc_lovely-ecru-stingray
+  QC.Lic:
+    repos:
+      gitlab.com/dgmaths9/gales licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.stealthy-smalt-wolverine.sh
+        container: qc.lic_homey-cyan-gopher
+  QC.Sec:
+    repos:
+      gitlab.com/dgmaths9/gales bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.beady-turquoise-chihuahua.sh
+        container: qc.sec_stinky-mustard-flamingo
+  QC.Sty:
+    repos:
+      gitlab.com/dgmaths9/gales flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.greasy-amber-lynx.sh
+        container: qc.sty_leaky-seashell-sparrow
+  QC.Ver:
+    repos:
+      gitlab.com/dgmaths9/gales get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.freaky-grey-javanese.sh
+        container: qc.ver_silly-olive-rat
+timeout: 5400
