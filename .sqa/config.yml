@@ -15,44 +15,44 @@ sqa_criteria:
     repos:
       gitlab.com/dgmaths9/gales git:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-cardinal-nightingale.sh
-        container: qc.acc_woozy-cream-tetra
+        - /usr/bin/env sh .sqa/script.crappy-silver-dane.sh
+        container: qc.acc_pretty-rust-giraffe
   QC.Doc:
     repos:
       gitlab.com/dgmaths9/gales find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cloudy-zucchini-coati.sh
-        container: qc.doc_scaly-cinnabar-quail
+        - /usr/bin/env sh .sqa/script.jumpy-lilac-bandicoot.sh
+        container: qc.doc_sleepy-jade-indri
       gitlab.com/dgmaths9/gales git:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-malachite-abyssinian.sh
-        container: qc.doc_skinny-goldenrod-monkey
+        - /usr/bin/env sh .sqa/script.squirrely-auburn-labradoodle.sh
+        container: qc.doc_seedy-salmon-fox
       gitlab.com/dgmaths9/gales markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-pink-neanderthal.sh
-        container: qc.doc_squeaky-zucchini-stoat
+        - /usr/bin/env sh .sqa/script.thirsty-celadon-hyena.sh
+        container: qc.doc_wimpy-cerulean-javanese
   QC.Lic:
     repos:
       gitlab.com/dgmaths9/gales licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.hazy-gold-millipede.sh
-        container: qc.lic_cloudy-zucchini-mole
+        - /usr/bin/env sh .sqa/script.dorky-asparagus-hummingbird.sh
+        container: qc.lic_tacky-taupe-stoat
   QC.Sec:
     repos:
       gitlab.com/dgmaths9/gales bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-wheat-earwig.sh
-        container: qc.sec_ready-coral-zonkey
+        - /usr/bin/env sh .sqa/script.jumpy-lemon-snake.sh
+        container: qc.sec_snoopy-jade-toucan
   QC.Sty:
     repos:
       gitlab.com/dgmaths9/gales flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-plum-snake.sh
-        container: qc.sty_skanky-azure-bullfrog
+        - /usr/bin/env sh .sqa/script.crappy-razzmatazz-macaw.sh
+        container: qc.sty_gummy-harlequin-scorpion
   QC.Ver:
     repos:
       gitlab.com/dgmaths9/gales get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-chartreuse-coati.sh
-        container: qc.ver_queasy-razzmatazz-capybara
+        - /usr/bin/env sh .sqa/script.pretty-brass-mayfly.sh
+        container: qc.ver_skinny-azure-bear
 timeout: 5400
