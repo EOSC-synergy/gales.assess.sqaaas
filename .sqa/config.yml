@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.10
+      branch: main
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     gitlab.com/dgmaths9/gales:
       branch: main
@@ -15,44 +15,54 @@ sqa_criteria:
     repos:
       gitlab.com/dgmaths9/gales git:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-silver-dane.sh
-        container: qc.acc_pretty-rust-giraffe
+        - /usr/bin/env sh .sqa/script.bumpy-cerise-beetle.sh
+        container: qc.acc_woozy-cyan-eagle
   QC.Doc:
     repos:
       gitlab.com/dgmaths9/gales find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.jumpy-lilac-bandicoot.sh
-        container: qc.doc_sleepy-jade-indri
+        - /usr/bin/env sh .sqa/script.woolly-ochre-dunker.sh
+        container: qc.doc_tacky-scarlet-ostrich
       gitlab.com/dgmaths9/gales git:
         commands:
-        - /usr/bin/env sh .sqa/script.squirrely-auburn-labradoodle.sh
-        container: qc.doc_seedy-salmon-fox
+        - /usr/bin/env sh .sqa/script.hilly-ivory-dingo.sh
+        container: qc.doc_ugly-auburn-beagle
       gitlab.com/dgmaths9/gales markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.thirsty-celadon-hyena.sh
-        container: qc.doc_wimpy-cerulean-javanese
+        - /usr/bin/env sh .sqa/script.breezy-carmine-akita.sh
+        container: qc.doc_shaggy-silver-mastiff
   QC.Lic:
     repos:
       gitlab.com/dgmaths9/gales licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-asparagus-hummingbird.sh
-        container: qc.lic_tacky-taupe-stoat
+        - /usr/bin/env sh .sqa/script.grumpy-chestnut-oyster.sh
+        container: qc.lic_lumpy-teal-wolfhound
   QC.Sec:
     repos:
       gitlab.com/dgmaths9/gales bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.jumpy-lemon-snake.sh
-        container: qc.sec_snoopy-jade-toucan
+        - /usr/bin/env sh .sqa/script.thirsty-aquamarine-axolotl.sh
+        container: qc.sec_bluesy-cinnamon-bonobo
   QC.Sty:
     repos:
       gitlab.com/dgmaths9/gales flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-razzmatazz-macaw.sh
-        container: qc.sty_gummy-harlequin-scorpion
+        - /usr/bin/env sh .sqa/script.homely-magnolia-kingfisher.sh
+        container: qc.sty_snazzy-xanthic-worm
+      gitlab.com/dgmaths9/gales oclint:
+        commands:
+        - /usr/bin/env sh .sqa/script.bluesy-periwinkle-wallaby.sh
+        container: qc.sty_blurry-bistre-birman
+  QC.Uni:
+    repos:
+      gitlab.com/dgmaths9/gales pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.scummy-gold-boar.sh
+        container: qc.uni_homely-brown-badger
   QC.Ver:
     repos:
       gitlab.com/dgmaths9/gales get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-brass-mayfly.sh
-        container: qc.ver_skinny-azure-bear
+        - /usr/bin/env sh .sqa/script.scaly-wheat-vole.sh
+        container: qc.ver_snappy-harlequin-wallaby
 timeout: 5400
